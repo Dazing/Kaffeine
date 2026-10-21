@@ -1,41 +1,25 @@
 # Kaffeine
 
-Kafka developer toolkit for managing, debugging, and operating Kafka.
+Browser-based graphical toolkit for managing, debugging, and operating Kafka.
 
 ## Purpose
 
-Give developers the visibility and control to manage, debug, and operate a Kafka deployment confidently — across many environments, clusters, and topics.
+Give developers the visibility and control to manage, debug, and operate a Kafka deployment confidently through a web UI — across many environments, clusters, and topics. Designed for individual developers working locally and teams sharing a deployment.
 
 Two problems drive the design:
 
-- **Scale.** Hand-checking topics across dev, staging, and production does not work at hundreds of clusters. Kaffeine keeps environments, clusters, and topics as first-class, switchable context, so one command runs where you intend.
+- **Scale.** Hand-checking topics across dev, staging, and production does not work at hundreds of clusters. Kaffeine keeps environments, clusters, and topics as first-class, switchable context, so every action targets the intended deployment.
 - **Trust.** Operating a live deployment means acting on evidence, not guesses. Every tool is read-first, explicit about scope, and reversible where it can be.
 
-Kaffeine is a platform, not a fixed command set. Automations, plugins, and the built-in toolkit are all extensible.
+Kaffeine is an extensible graphical workspace, not a fixed set of screens — the built-in toolkit, automations, and plugins are all designed to be extended.
 
-## Core Tools
+## What exists today
 
-| Tool | Description |
-| --- | --- |
-| `read` | Read messages from a topic. Filter by offset, timestamp, partition, and key. |
-| `search` | Find specific messages in a topic by key, header, or body content. |
-| `validate` | Validate message bodies against a schema (JSON Schema, Avro, Protobuf). |
+The application runs and shows its own status. It does not connect to Kafka yet — no topic browsing, no message tools. The first release adds cluster connections, topic discovery, and message preview.
 
-## Optional Tools
+## Roadmap
 
-Disabled by default. These change or destroy data.
-
-| Tool | Description |
-| --- | --- |
-| `purge` | Empty a topic. |
-| `configure` | Change topic settings: partitions, retention, compression. |
-
-## Extensible
-
-| Extension | Description |
-| --- | --- |
-| `automations` | Scheduled or event-triggered runs of any tool: continuous validation, retention sweeps, health checks. |
-| `plugins` | Add tools in your own code. Plugins register alongside the built-ins and share the same context. |
+The planned capabilities and the order they arrive in: [docs/roadmap.md](docs/roadmap.md).
 
 ## Status
 

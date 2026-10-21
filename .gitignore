@@ -6,6 +6,10 @@
 # dotenv files
 .env
 
+# Local application database and SQLite journal files
+kaffeine.db
+kaffeine.db-*
+
 # User-specific files
 *.rsuser
 *.suo
@@ -292,6 +296,8 @@ FakesAssemblies/
 # Node.js Tools for Visual Studio
 .ntvs_analysis.dat
 node_modules/
+src/Kaffeine.Web/dist/
+*.tsbuildinfo
 
 # Visual Studio 6 build log
 *.plg
